@@ -1,0 +1,22 @@
+
+{
+    "cellaApp": {
+        "producer" : {
+            "home": {
+                "title": "Producers",
+                "createLabel": "Genera un nuovo Producer",
+                "createOrEditLabel": "Genera o modifica un Producer"
+            },
+            "created": "&Egrave; stato generato un nuovo Producer con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Producer identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Producer con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Producer {{ id }}?"
+            },
+            "detail": {
+                "title": "Producer"
+            },
+            "name": "Name"
+        }
+    }
+}

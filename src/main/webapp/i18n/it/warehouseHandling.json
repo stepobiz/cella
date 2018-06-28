@@ -1,0 +1,25 @@
+
+{
+    "cellaApp": {
+        "warehouseHandling" : {
+            "home": {
+                "title": "WarehouseHandlings",
+                "createLabel": "Genera un nuovo Warehouse Handling",
+                "createOrEditLabel": "Genera o modifica un Warehouse Handling"
+            },
+            "created": "&Egrave; stato generato un nuovo Warehouse Handling con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Warehouse Handling identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Warehouse Handling con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Warehouse Handling {{ id }}?"
+            },
+            "detail": {
+                "title": "Warehouse Handling"
+            },
+            "date": "Date",
+            "warehouseHandlingType": "Warehouse Handling Type",
+            "warehouseHandling": "Warehouse Handling",
+            "warehouseHandling": "Warehouse Handling"
+        }
+    }
+}

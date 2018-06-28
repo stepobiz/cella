@@ -1,0 +1,22 @@
+
+{
+    "cellaApp": {
+        "unitMeasure" : {
+            "home": {
+                "title": "UnitMeasures",
+                "createLabel": "Genera un nuovo Unit Measure",
+                "createOrEditLabel": "Genera o modifica un Unit Measure"
+            },
+            "created": "&Egrave; stato generato un nuovo Unit Measure con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Unit Measure identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Unit Measure con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Unit Measure {{ id }}?"
+            },
+            "detail": {
+                "title": "Unit Measure"
+            },
+            "description": "Description"
+        }
+    }
+}

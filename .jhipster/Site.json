@@ -1,0 +1,31 @@
+{
+    "name": "Site",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "siteStatus",
+            "fieldType": "SiteStatus",
+            "fieldValues": "Open,Close"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "site",
+            "otherEntityName": "customer",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180628122057",
+    "entityTableName": "site",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

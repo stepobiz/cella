@@ -1,0 +1,32 @@
+{
+    "name": "WarehouseHandlingItems",
+    "fields": [
+        {
+            "fieldName": "quantity",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "warehouseHandlingItems",
+            "otherEntityName": "warehouseHandling",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "warehouseHandlingItems",
+            "otherEntityName": "inventory",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180628122103",
+    "entityTableName": "warehouse_handling_items",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

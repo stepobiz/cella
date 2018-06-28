@@ -1,0 +1,68 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="cellaApp.warehouseHandling.home.title">Warehouse Handlings</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-warehouse-handling" [routerLink]="['/warehouse-handling/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="cellaApp.warehouseHandling.home.createLabel">
+            Create new Warehouse Handling
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="warehouseHandlings">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="cellaApp.warehouseHandling.date">Date</span></th>
+            <th><span jhiTranslate="cellaApp.warehouseHandling.warehouseHandlingType">Warehouse Handling Type</span></th>
+            <th><span jhiTranslate="cellaApp.warehouseHandling.warehouseHandling">Warehouse Handling</span></th>
+            <th><span jhiTranslate="cellaApp.warehouseHandling.warehouseHandling">Warehouse Handling</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let warehouseHandling of warehouseHandlings ;trackBy: trackId">
+                <td><a [routerLink]="['/warehouse-handling', warehouseHandling.id, 'view' ]">{{warehouseHandling.id}}</a></td>
+                <td>{{warehouseHandling.date | date:'medium'}}</td>
+                <td jhiTranslate="{{'cellaApp.WarehouseHandlingType.' + warehouseHandling.warehouseHandlingType}}">{{warehouseHandling.warehouseHandlingType}}</td>
+                <td>
+                    <div *ngIf="warehouseHandling.warehouseHandling">
+                        <a [routerLink]="['../warehouse', warehouseHandling.warehouseHandling?.id, 'view' ]" >{{warehouseHandling.warehouseHandling?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="warehouseHandling.warehouseHandling">
+                        <a [routerLink]="['../site', warehouseHandling.warehouseHandling?.id, 'view' ]" >{{warehouseHandling.warehouseHandling?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/warehouse-handling', warehouseHandling.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/warehouse-handling', warehouseHandling.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'warehouse-handling/'+ warehouseHandling.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

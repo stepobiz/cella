@@ -7,6 +7,15 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "customer": "Customer",
+                "site": "Site",
+                "producer": "Producer",
+                "inventoryCategory": "Inventory Category",
+                "inventory": "Inventory",
+                "warehouse": "Warehouse",
+                "warehouseHandling": "Warehouse Handling",
+                "warehouseHandlingItems": "Warehouse Handling Items",
+                "unitMeasure": "Unit Measure",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

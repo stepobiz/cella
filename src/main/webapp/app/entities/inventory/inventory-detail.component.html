@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="inventory">
+            <h2><span jhiTranslate="cellaApp.inventory.detail.title">Inventory</span> {{inventory.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="cellaApp.inventory.name">Name</span></dt>
+                <dd>
+                    <span>{{inventory.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="cellaApp.inventory.inventory">Inventory</span></dt>
+                <dd>
+                    <div *ngIf="inventory.inventory">
+                        <a [routerLink]="['/unit-measure', inventory.inventory?.id, 'view']">{{inventory.inventory?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="cellaApp.inventory.inventory">Inventory</span></dt>
+                <dd>
+                    <div *ngIf="inventory.inventory">
+                        <a [routerLink]="['/inventory-category', inventory.inventory?.id, 'view']">{{inventory.inventory?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="cellaApp.inventory.inventory">Inventory</span></dt>
+                <dd>
+                    <div *ngIf="inventory.inventory">
+                        <a [routerLink]="['/producer', inventory.inventory?.id, 'view']">{{inventory.inventory?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/inventory', inventory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
