@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-warehouse-handling-heading" jhiTranslate="cellaApp.warehouseHandling.home.createOrEditLabel">Create or edit a Warehouse Handling</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!warehouseHandling.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="warehouseHandling.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cellaApp.warehouseHandling.date" for="field_date">Date</label>
+                    <div class="d-flex">
+                        <input id="field_date" type="datetime-local" class="form-control" name="date" [(ngModel)]="date"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cellaApp.warehouseHandling.warehouseHandlingType" for="field_warehouseHandlingType">Warehouse Handling Type</label>
+                    <select class="form-control" name="warehouseHandlingType" [(ngModel)]="warehouseHandling.warehouseHandlingType" id="field_warehouseHandlingType" >
+                        <option value="Provision">{{'cellaApp.WarehouseHandlingType.Provision' | translate}}</option>
+                        <option value="Exhaust">{{'cellaApp.WarehouseHandlingType.Exhaust' | translate}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cellaApp.warehouseHandling.warehouseHandling" for="field_warehouseHandling">Warehouse Handling</label>
+                    <select class="form-control" id="field_warehouseHandling" name="warehouseHandling" [(ngModel)]="warehouseHandling.warehouseHandling" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="warehouseOption.id === warehouseHandling.warehouseHandling?.id ? warehouseHandling.warehouseHandling : warehouseOption" *ngFor="let warehouseOption of warehouses; trackBy: trackWarehouseById">{{warehouseOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="cellaApp.warehouseHandling.warehouseHandling" for="field_warehouseHandling">Warehouse Handling</label>
+                    <select class="form-control" id="field_warehouseHandling" name="warehouseHandling" [(ngModel)]="warehouseHandling.warehouseHandling" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="siteOption.id === warehouseHandling.warehouseHandling?.id ? warehouseHandling.warehouseHandling : siteOption" *ngFor="let siteOption of sites; trackBy: trackSiteById">{{siteOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

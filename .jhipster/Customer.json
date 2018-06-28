@@ -1,0 +1,24 @@
+{
+    "name": "Customer",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "customerType",
+            "fieldType": "CustomerType",
+            "fieldValues": "Private,Company"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180628122056",
+    "entityTableName": "customer",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

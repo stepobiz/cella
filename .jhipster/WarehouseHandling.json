@@ -1,0 +1,37 @@
+{
+    "name": "WarehouseHandling",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "warehouseHandlingType",
+            "fieldType": "WarehouseHandlingType",
+            "fieldValues": "Provision,Exhaust"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "warehouseHandling",
+            "otherEntityName": "warehouse",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "warehouseHandling",
+            "otherEntityName": "site",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180628122102",
+    "entityTableName": "warehouse_handling",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

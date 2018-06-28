@@ -1,0 +1,9 @@
+{
+    "cellaApp": {
+        "SiteStatus" : {
+            "null": "",
+            "Open": "Open",
+            "Close": "Close"
+        }
+    }
+}

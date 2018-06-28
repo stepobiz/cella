@@ -1,0 +1,9 @@
+{
+    "cellaApp": {
+        "WarehouseHandlingType" : {
+            "null": "",
+            "Provision": "Provision",
+            "Exhaust": "Exhaust"
+        }
+    }
+}

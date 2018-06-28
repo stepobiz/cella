@@ -1,0 +1,70 @@
+
+enum CustomerType {
+	Private, Company
+}
+enum WarehouseHandlingType {
+	Provision, Exhaust
+}
+
+enum SiteStatus {
+	Open, Close
+}
+
+entity Customer {
+	name String
+    customerType CustomerType
+}
+entity Site {
+	description String
+    siteStatus SiteStatus
+}
+entity Producer {
+	name String
+}
+entity InventoryCategory {
+	name String
+}
+entity Inventory {
+	name String
+}
+entity Warehouse {
+	name String
+}
+entity WarehouseHandling {
+	date ZonedDateTime
+    warehouseHandlingType WarehouseHandlingType
+}
+entity WarehouseHandlingItems {
+	quantity Integer
+}
+entity UnitMeasure {
+	description String
+}
+
+relationship ManyToOne {
+	WarehouseHandlingItems to WarehouseHandling
+}
+relationship ManyToOne {
+	WarehouseHandlingItems to Inventory
+}
+relationship ManyToOne {
+	WarehouseHandling to Warehouse
+}
+relationship ManyToOne {
+    WarehouseHandling to Site
+}
+relationship ManyToOne {
+    Inventory to UnitMeasure
+}
+
+relationship ManyToOne {
+	Site to Customer
+}
+
+relationship ManyToOne {
+	Inventory to InventoryCategory
+}
+
+relationship ManyToOne {
+	Inventory to Producer
+}

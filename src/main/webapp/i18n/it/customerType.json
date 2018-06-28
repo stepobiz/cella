@@ -1,0 +1,9 @@
+{
+    "cellaApp": {
+        "CustomerType" : {
+            "null": "",
+            "Private": "Private",
+            "Company": "Company"
+        }
+    }
+}

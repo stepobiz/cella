@@ -1,0 +1,24 @@
+
+{
+    "cellaApp": {
+        "warehouseHandlingItems" : {
+            "home": {
+                "title": "Warehouse Handling Items",
+                "createLabel": "Create a new Warehouse Handling Items",
+                "createOrEditLabel": "Create or edit a Warehouse Handling Items"
+            },
+            "created": "A new Warehouse Handling Items is created with identifier {{ param }}",
+            "updated": "A Warehouse Handling Items is updated with identifier {{ param }}",
+            "deleted": "A Warehouse Handling Items is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Warehouse Handling Items {{ id }}?"
+            },
+            "detail": {
+                "title": "Warehouse Handling Items"
+            },
+            "quantity": "Quantity",
+            "warehouseHandlingItems": "Warehouse Handling Items",
+            "warehouseHandlingItems": "Warehouse Handling Items"
+        }
+    }
+}

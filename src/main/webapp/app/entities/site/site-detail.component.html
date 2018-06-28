@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="site">
+            <h2><span jhiTranslate="cellaApp.site.detail.title">Site</span> {{site.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="cellaApp.site.description">Description</span></dt>
+                <dd>
+                    <span>{{site.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="cellaApp.site.siteStatus">Site Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'cellaApp.SiteStatus.' + site.siteStatus}}">{{site.siteStatus}}</span>
+                </dd>
+                <dt><span jhiTranslate="cellaApp.site.site">Site</span></dt>
+                <dd>
+                    <div *ngIf="site.site">
+                        <a [routerLink]="['/customer', site.site?.id, 'view']">{{site.site?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/site', site.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

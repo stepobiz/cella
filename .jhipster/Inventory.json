@@ -1,0 +1,38 @@
+{
+    "name": "Inventory",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "inventory",
+            "otherEntityName": "unitMeasure",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "inventory",
+            "otherEntityName": "inventoryCategory",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "inventory",
+            "otherEntityName": "producer",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180628122100",
+    "entityTableName": "inventory",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

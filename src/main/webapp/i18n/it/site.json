@@ -1,0 +1,24 @@
+
+{
+    "cellaApp": {
+        "site" : {
+            "home": {
+                "title": "Sites",
+                "createLabel": "Genera un nuovo Site",
+                "createOrEditLabel": "Genera o modifica un Site"
+            },
+            "created": "&Egrave; stato generato un nuovo Site con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Site identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Site con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Site {{ id }}?"
+            },
+            "detail": {
+                "title": "Site"
+            },
+            "description": "Description",
+            "siteStatus": "Site Status",
+            "site": "Site"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+
+{
+    "cellaApp": {
+        "inventoryCategory" : {
+            "home": {
+                "title": "InventoryCategories",
+                "createLabel": "Genera un nuovo Inventory Category",
+                "createOrEditLabel": "Genera o modifica un Inventory Category"
+            },
+            "created": "&Egrave; stato generato un nuovo Inventory Category con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Inventory Category identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Inventory Category con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Inventory Category {{ id }}?"
+            },
+            "detail": {
+                "title": "Inventory Category"
+            },
+            "name": "Name"
+        }
+    }
+}

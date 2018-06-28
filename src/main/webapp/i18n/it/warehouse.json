@@ -1,0 +1,22 @@
+
+{
+    "cellaApp": {
+        "warehouse" : {
+            "home": {
+                "title": "Warehouses",
+                "createLabel": "Genera un nuovo Warehouse",
+                "createOrEditLabel": "Genera o modifica un Warehouse"
+            },
+            "created": "&Egrave; stato generato un nuovo Warehouse con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Warehouse identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Warehouse con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Warehouse {{ id }}?"
+            },
+            "detail": {
+                "title": "Warehouse"
+            },
+            "name": "Name"
+        }
+    }
+}
